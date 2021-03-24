@@ -37,8 +37,6 @@ class TaskTableViewCell: UITableViewCell {
             
         }
         task.resume()
-        
-        //imageCell.image = UIImage(systemName: imageURL) //!!!
     }
     
     @IBOutlet weak var imageCell: UIImageView!
@@ -49,7 +47,6 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
