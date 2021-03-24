@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var articles: [Article] = []
+    var apiService: ApiService = ApiService()
     
     
     override func viewDidLoad() {
@@ -23,7 +24,12 @@ class TableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        let apiService = ApiService()
+        apiService.getNews(completion: fetchNews)
+    }
+    
+    @IBAction func refresh(_ sender: UIRefreshControl) {
+        sender.endRefreshing()
+        
         apiService.getNews(completion: fetchNews)
     }
     

@@ -12,7 +12,12 @@ struct ApiService{
     let API_KEY = "04c48f56a9d04c32b7b0d14416597f0c"
     
     init(){
-        let resourceString = "https://newsapi.org/v2/everything?q=tesla&from=2021-02-24&sortBy=publishedAt&apiKey=\(API_KEY)"
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let formattedDate = format.string(from: date)
+        
+        let resourceString = "https://newsapi.org/v2/everything?q=tesla&from=\(formattedDate)&sortBy=publishedAt&apiKey=\(API_KEY)"
         
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
         
