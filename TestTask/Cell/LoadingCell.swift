@@ -9,6 +9,7 @@ import UIKit
 
 class LoadingCell: UITableViewCell {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     static let identifier = "LoadingCell"
     
@@ -16,10 +17,7 @@ class LoadingCell: UITableViewCell {
         return UINib(nibName: "LoadingCell", bundle: nil)
     }
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 }

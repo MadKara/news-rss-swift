@@ -83,20 +83,28 @@
 		2D442B7025F2AB6700B9E420 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				2D566192260BA52C008A0AF6 /* API */,
 				2D2BF06526091643004A7C67 /* Cell */,
 				2D442B7125F2AB6700B9E420 /* AppDelegate.swift */,
 				2D442B7325F2AB6700B9E420 /* SceneDelegate.swift */,
 				2D442B7525F2AB6700B9E420 /* ViewController.swift */,
 				2D2BF06A26092B8C004A7C67 /* TableViewController.swift */,
+				2D8016EC25FBDD580000C66F /* WebViewController.swift */,
 				2D442B7725F2AB6700B9E420 /* Main.storyboard */,
 				2D442B7A25F2AB6800B9E420 /* Assets.xcassets */,
 				2D442B7C25F2AB6800B9E420 /* LaunchScreen.storyboard */,
 				2D442B7F25F2AB6800B9E420 /* Info.plist */,
-				2D31C4A925F3D34B004B9F18 /* APIData.swift */,
-				2D8016EC25FBDD580000C66F /* WebViewController.swift */,
-				2D2BF06726091783004A7C67 /* ApiRequest.swift */,
 			);
 			path = TestTask;
+			sourceTree = "<group>";
+		};
+		2D566192260BA52C008A0AF6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2D31C4A925F3D34B004B9F18 /* APIData.swift */,
+				2D2BF06726091783004A7C67 /* ApiRequest.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

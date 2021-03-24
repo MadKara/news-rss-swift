@@ -22,6 +22,20 @@ class TableViewController: UITableViewController {
        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        let apiService = ApiService()
+        apiService.getNews(completion: fetchNews)
+    }
+    
+    func fetchNews(result: Result<[Article], Error>) -> Void {
+        do {
+            articles = try result.get();
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {
+            print("Error retrieving the value: \(error)")
+        }
     }
 
     // MARK: - Table view data source

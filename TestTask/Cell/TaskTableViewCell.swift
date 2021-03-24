@@ -9,6 +9,13 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var titleCell: UILabel!
+    @IBOutlet weak var sourceCell: UILabel!
+    @IBOutlet weak var authorCell: UILabel!
+    @IBOutlet weak var descriptionCell: UILabel!
+    
+    
     static let identifier = "TaskTableViewCell"
     
     static func nib() -> UINib {
@@ -34,16 +41,10 @@ class TaskTableViewCell: UITableViewCell {
                 let image = UIImage(data: data)
                 self?.imageCell.image = image
             }
-            
         }
         task.resume()
     }
     
-    @IBOutlet weak var imageCell: UIImageView!
-    @IBOutlet weak var titleCell: UILabel!
-    @IBOutlet weak var sourceCell: UILabel!
-    @IBOutlet weak var authorCell: UILabel!
-    @IBOutlet weak var descriptionCell: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

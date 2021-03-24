@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct NewsRequest{
+struct ApiService{
     let resourceURL: URL
     let API_KEY = "04c48f56a9d04c32b7b0d14416597f0c"
     
     init(){
-        let resourceString = "http://newsapi.org/v2/everything?q=tesla&from=2021-02-14&sortBy=publishedAt&apiKey=\(API_KEY)"
+        let resourceString = "https://newsapi.org/v2/everything?q=tesla&from=2021-02-24&sortBy=publishedAt&apiKey=\(API_KEY)"
         
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
         
@@ -23,7 +23,8 @@ struct NewsRequest{
         
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { data, _, error in
             guard let data = data, error == nil else {
-                //completion(.failure())
+                //TODO: throw an exeption
+                //completion(.failure(error))
                 return
             }
             
